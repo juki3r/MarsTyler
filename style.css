@@ -89,9 +89,6 @@ table, th, td{
     }
 }
 @media screen and (max-width:425px){
-    nav ul{
-        text-align: center;
-    }
     .carousel-inner{
         height: 50vh;
     }
@@ -100,18 +97,7 @@ table, th, td{
     }
     .imageshow{
         height: 200px !important;
-    }
-    .socialIcons a{
-        font-size: 20px;
-        margin: 0 10px;
-    }
-    footer ul li{
-        display: block;
-        padding: 0 5px;
-    }
-    footer ul li a{
-        font-size: 12px;
-    }    
+    }  
 }
 @media screen and (max-width:320px){
     .carousel-inner{
@@ -119,17 +105,6 @@ table, th, td{
     }
     .carousel-item img{
         height: 70vh;
-    }
-    .socialIcons a{
-        font-size: 20px;
-        margin: 0 4px;
-    }
-    footer ul li{
-        display: block;
-        padding: 0 5px;
-    }
-    footer ul li a{
-        font-size: 12px;
     }
     table th{
         font-size: 14px;
