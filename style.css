@@ -74,10 +74,10 @@ table, th, td{
         font-size: 16px !important;
     }
     .carousel-inner{
-        /* height: 50vh; */
+        height: 50vh;
     }
     .carousel-item img{
-        height: 100vh;
+        height: 50vh;
     }
     .imageshow{
         height: 280px;
