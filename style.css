@@ -85,10 +85,6 @@ table, th, td{
     padding: 10px;
     font-size: 13px;
 }
-.footer-2{
-    margin-top: 80vh;
-}
-
 
 
 
@@ -108,7 +104,7 @@ table, th, td{
         font-size: 16px !important;
     }
     .carousel-inner{
-        height: 50vh;
+        height: 20vh;
     }
     .imageshow{
         height: 280px;
