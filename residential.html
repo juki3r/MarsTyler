@@ -11,17 +11,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-md fixed-top">
+ 
+    <nav class="navbar navbar-expand-md bg-dark ">
         <div class="container">
-            <!-- LOGO -->
-          <a class="navbar-brand fs-1" href="index.html">MarsTyler</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <a class="navbar-brand fs-1 text-light" href="index.html"><span class="text-danger fw-bold">Mars</span>Tyler</a>
+          <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <!-- NAVBAR LINKS -->
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
               <li class="nav-item mx-3">
                 <a class="nav-link fs-5 text-light" href="index.html">HOME</a>
               </li>
@@ -38,102 +36,173 @@
           </div>
         </div>
       </nav>
-      <div class="card col-xl-5 col-lg-7 col-md-7 m-auto mt-5 p-3 shadow" >
-        <div class="card-body">
-          <h3 class="text-center mb-5 ">Residential Application</h3>
-          <form action="#" class="row ">
-              <div class="row">
-                <div class="col-xl-6 col-lg-6 col-md-6 mb-2 ">
-                  <input type="text" class="form-control" name="firstname" id="firstname" placeholder="First name" required>
-                </div>
-                <div class="col mb-2">
-                  <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Last name" required>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xl-6 col-lg-6 col-md-6 mb-2">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Email address" required>
-                </div>
-                <div class="col mb-2">
-                  <input type="number" class="form-control" name="phonenumber" id="phonenumber" placeholder="Phone number 09xxxx" required>
+      <!-- FORM -->
+            <form class="row needs-validation mx-auto form mt-5 shadow p-5 border rounded-4 "  novalidate>
+              <h3 class="text-center p-0 mb-0">APPLICATION FORM</h3>
+              <h6 class="text-center mt-0 pt-0 mb-4">Business</h4>
+              <div class="col-12 col-md-6">
+                <label for="firstname" class="form-label">First name</label>
+                <input type="text" class="form-control" id="firstname" required>
+                <div class="invalid-feedback">
+                  This field is required
                 </div>
               </div>
-              <div class="row">
-                <div class="col mb-2">
-                  <input type="text" class="form-control" name="address" id="address" placeholder="Complete address" required>
+              <div class="col-12 col-md-6">
+                <label for="lastname" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="lastname" required>
+                <div class="invalid-feedback">
+                  This field is required
                 </div>
               </div>
-              <div class="row">
-                <div class="col-xl-6 col-lg-6 col-md-6 mb-2">
-                  <select name="Gender" id="Gender" class="form-control custom-select ">
-                    <option selected>Gender</option>
-                    <option value="1">Female</option>
-                    <option value="2">Male</option>
-                    <option value="3">Others</option>
-                  </select>
-                </div>
-                <div class="col mb-2">
-                  <input type="number" class="form-control" name="phonenumber" id="phonenumber" placeholder="Phone number 09xxxx" required>
+              <div class="col-12">
+                <label for="email" class="form-label">Email address</label>
+                <div class="input-group has-validation">
+                  <span class="input-group-text" id="inputGroupPrepend">@</span>
+                  <input type="text" class="form-control" id="email" aria-describedby="inputGroupPrepend" required>
+                  <div class="invalid-feedback">
+                    This field is required
+                  </div>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-xl-6 col-lg-6 col-md-6 mb-2">
-                  <select name="ID" id="ID" class="custom-select form-control">
-                    <option selected>Type of ID</option>
-                    <option value="1">Phil ID</option>
-                    <option value="2">Passport</option>
-                    <option value="3">Driver's Licence</option>
-                  </select>
-                </div>
-                <div class="col">
-                  <input type="file" class="form-control custom-file-input"  required>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xl-6 col-lg-6 col-md-6 mb-2">
-                  <select name="ID" id="ID" class="custom-select form-control">
-                    <option selected>Status</option>
-                    <option value="1">Single</option>
-                    <option value="2">Married</option>                 
-                  </select>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 mb-2">
-                  <select name="ID" id="ID" class="custom-select form-control">
-                    <option selected>Internet Plan</option>
-                    <option value="1">899</option>
-                    <option value="2">1299</option>   
-                    <option value="3">1599</option>
-                    <option value="4">2099</option>            
-                  </select>
+              <div class="col-12 col-md-4">
+                <label for="gender" class="form-label">Gender</label>
+                <select class="form-select" id="gender" required>
+                  <option selected disabled value="">Choose...</option>
+                  <option value="1">Female</option>
+                  <option value="2">Male</option>
+                  <option value="3">Others</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select gender.
                 </div>
               </div>
-              <div class="row">
-                <div class="col">
-                  <a href="internet.html" class="btn btn-danger w-100 mt-5">Cancel</a>
-                  <button class="btn btn-primary w-100 mt-3">Submit</button>
+              <div class="col-12 col-md-4">
+                <label for="phonenumber" class="form-label">Phone number</label>
+                <input type="number" class="form-control" id="phonenumber" placeholder="09xxxx" required>
+                <div class="invalid-feedback">
+                  This field is required
                 </div>
-              </div>           
-          </form>
-        </div>
-      </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <label for="bdate" class="form-label">Birthday</label>
+                <input type="date" id="bdate" class="form-control">
+              </div>
+              <div class="col-12 col-md-4">
+                <label for="town" class="form-label">Town</label>
+                <select class="form-select" id="town" required>
+                  <option selected disabled value="">Choose...</option>
+                  <option value="1">JARO</option>
+                  <option value="2">MOLO</option>
+                  <option value="3">MIAGAO</option>
+                  <option value="4">SARA</option>
+                  <option value="5">BALASAN</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid town.
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <label for="barangay" class="form-label">Barangay</label>
+                <input type="text" class="form-control" id="barangay" required>
+                <div class="invalid-feedback">
+                  This field is required
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <label for="internetplans" class="form-label">Internet Plan</label>
+                <select class="form-select" id="internetplans" required>
+                  <option selected disabled value="">Choose...</option>
+                  <option value="1">1500</option>
+                  <option value="2">2000</option>
+                  <option value="3">2500</option>
+                  <option value="4">3000</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select internet plans.
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="idnumber" class="form-label">Id number</label>
+                <input type="text" class="form-control" id="idnumber" required>
+                <div class="invalid-feedback">
+                  Please provide id number.
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="idfile" class="form-label">Upload I.D</label>
+                <input class="form-control" type="file" id="idfile">
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                  <label class="form-check-label" for="invalidCheck">
+                    Agree to terms and conditions. <a href="#" role="button" data-bs-toggle="modal" data-bs-target="#terms">Terms</a>
+                    <div class="modal" id="terms">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">Terms</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <p>You agree for data privacy act. We collect your information for valid purposes.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </label>
+                  <div class="invalid-feedback">
+                    You must agree before submitting. 
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <a href="internet.html" class="btn btn-danger my-3 w-100">Cancel</a>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary w-100" type="submit" id="submit">Submit</button>
+              </div>
+            </form>
+            <script>
+              // Example starter JavaScript for disabling form submissions if there are invalid fields
+                (function () {
+                  'use strict'
+
+                  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                  var forms = document.querySelectorAll('.needs-validation')
+
+                  // Loop over them and prevent submission
+                  Array.prototype.slice.call(forms)
+                    .forEach(function (form) {
+                      form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                          event.preventDefault()
+                          event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                      }, false)
+                    })
+                })()
+            </script>
           <!-- Footer Area-->
-            <footer class="text-center mt-auto">
-                <div class="socialIcons">
-                    <a href="https://www.facebook.com"><i class="fa-brands fa-facebook "></i></a>
-                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram "></i></a>
-                    <a href="https://www.google.com/"><i class="fa-brands fa-google "></i></a>
-                    <a href="https://twitter.com/"><i class="fa-brands fa-twitter "></i></a>
-                    <a href="https://youtube.com/"><i class="fa-brands fa-youtube "></i></a>
-                    <a href="https://whatsapp.com/"><i class="fa-brands fa-whatsapp "></i></a>
-                </div>
-                    <ul >
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="internet.html">InternetPlans</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="login.html">Login</a></li>
-                    </ul>
-                        <p>Copyright &copy;2023 Designed by <span>Jupiter Arcenas</span></p>                
-            </footer>
+          <footer class="text-center mt-auto py-5 pb-0">
+            <div>
+                <a class="mx-2 mx-md-3 mx-lg-4 mx-xl-4" href="https://www.facebook.com"><i class="fa-brands fa-facebook fs-1"></i></a>
+                <a class="mx-2 mx-md-3 mx-lg-4 mx-xl-4" href="https://www.instagram.com/"><i class="fa-brands fa-instagram fs-1"></i></a>
+                <a class="mx-2 mx-md-3 mx-lg-4 mx-xl-4" href="https://www.google.com/"><i class="fa-brands fa-google fs-1"></i></a>
+                <a class="mx-2 mx-md-3 mx-lg-4 mx-xl-4" href="https://twitter.com/"><i class="fa-brands fa-twitter fs-1"></i></a>
+                <a class="mx-2 mx-md-3 mx-lg-4 mx-xl-4" href="https://youtube.com/"><i class="fa-brands fa-youtube fs-1"></i></a>
+                <a class="mx-2 mx-md-3 mx-lg-4 mx-xl-4" href="https://whatsapp.com/"><i class="fa-brands fa-whatsapp fs-1"></i></a>
+            </div>
+                <ul class="list-inline d-md-flex justify-content-center">
+                    <li class="mx-3 mt-2 mt-md-3"><a class="text-decoration-none fs-4" href="index.html">Home</a></li>
+                    <li class="mx-3 mt-2 mt-md-3"><a class="text-decoration-none fs-4" href="internet.html">InternetPlans</a></li>
+                    <li class="mx-3 mt-2 mt-md-3"><a class="text-decoration-none fs-4" href="contact.html">Contact</a></li>
+                    <li class="mx-3 mt-2 mt-md-3"><a class="text-decoration-none fs-4" href="login.html">Login</a></li>
+                </ul>
+                    <p>Copyright &copy;2023 Designed by <span>Jupiter Arcenas</span></p>                
+        </footer>
      
 </body>
 </html>
