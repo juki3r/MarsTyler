@@ -61,6 +61,7 @@ table, th, td{
 
 /* MEDIA QUERY */
 
+
 @media screen and (max-width:1024px){
     .descriptions{
         font-size: 13px;
@@ -73,9 +74,9 @@ table, th, td{
     .nav-link{
         font-size: 16px !important;
     }
-    .carousel-inner{
-        /* height: 50vh; */
-    }
+    /* .carousel-inner{
+         height: 50vh; 
+    } */
     .carousel-item img{
         height: 100vh;
     }
@@ -97,7 +98,17 @@ table, th, td{
     }
     .imageshow{
         height: 200px !important;
-    }  
+    } 
+}
+@media screen and (min-width:600px){
+    form{
+        width: 70%;
+    }
+}
+@media screen and (min-width:1000px){
+    form{
+        width: 50%;
+    }
 }
 @media screen and (max-width:320px){
     .carousel-inner{
