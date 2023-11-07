@@ -19,7 +19,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center" id="normalNav">
               <li class="nav-item mx-3">
                 <a class="nav-link fs-5 text-light" href="index.html">HOME</a>
               </li>
@@ -33,23 +33,58 @@
                 <a class="nav-link fs-5 text-light" href="login.html">LOGIN</a>
               </li>
             </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center" id="privNav">
+              <li class="nav-item mx-3">
+                <span class="nav-link fs-5 text-light text-uppercase" id="user">user</span>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
-      <div class="card mx-auto px-5 py-3 mt-auto shadow">
+      <div class="card mx-auto px-5 py-3 mt-auto shadow " id="login-form">
         <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-person-circle mx-auto" viewBox="0 0 16 16">
           <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
           <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
         </svg>
         <div class="card-body">
-          <input type="text" class="form-control my-2" placeholder="Username">
-          <input type="text" class="form-control" placeholder="Password">
+          <input type="text" class="form-control my-2" placeholder="Username" id="username">
+          <input type="text" class="form-control" placeholder="Password" id="userpasswd">
+          <label class="form-label text-danger" style="font-size: 13px;" id="invalidnotif"></label>
         </div>
         <div class="card-footer border-0 bg-transparent">
-          <button class="btn btn-primary w-100" id="loginuser">Login</button>
+          <button class="btn btn-primary w-100" id="loginbtn" >Login</button>
           <p class="text-center my-2">Be a member? <span><a href="internet.html">Apply</a></span></p>
         </div>
       </div>
+      <!-- MOVIES -->
+      <div class="container-fluid m-1" id="advance-user">
+        <div class="row">
+          <div class="col-12 col-md-7 shadow border rounded d-flex flex-column bg-secondary py-2">
+              <h1 class="text-center" style="height: 200px; background-color: white; height: 400px;">Play section</h1>
+              <div class="for-comments text-center pt-5" style="height: 100px;">Comment section</div>
+              <div></div>
+          </div>
+          <!-- PLAYLIST -->
+          <div class="col-12 col-md">          
+            <div class="row px-2">
+              <div class="col-12 border shadow mt-2">
+                <div style="height: 200px; margin: auto;">Playlist</div>
+              </div>
+              <div class="col-12 border shadow mt-2">
+                <div style="height: 200px; margin: auto;">2</div>
+              </div>
+              <div class="col-12 border shadow mt-2">
+                <div style="height: 200px; margin: auto;">3</div>
+              </div>
+              <div class="col-12 border shadow mt-2">
+                <div style="height: 200px; margin: auto;">3</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
           <!-- Footer Area-->
         <footer class="text-center mt-auto py-5 pb-0">
           <div>
@@ -68,6 +103,30 @@
             </ul>
                 <p>Copyright &copy;2023 Designed by <span>Jupiter Arcenas</span></p>                
         </footer>
-     
+        
+        <script>
+          document.getElementById('privNav').style.display = 'none';
+          document.getElementById('advance-user').style.display = 'none';
+          var username = document.getElementById('username');
+          var userpasswd = document.getElementById('userpasswd');
+          var invalidnotif = document.getElementById('invalidnotif');
+          var loginbtn = document.getElementById('loginbtn');
+          var user = document.getElementById('user');
+          
+          loginbtn.addEventListener('click', function(){
+            if((!username.value & !userpasswd.value) | (username.value != "KodeGo")){
+              invalidnotif.innerHTML = 'Invalid username and password !'
+            }
+            else if(username.value == "KodeGo" && userpasswd.value == "admin"){
+              document.getElementById('normalNav').style.display = 'none';
+              document.getElementById('privNav').style.display = 'flex';
+              user.innerHTML = username.value;
+              document.getElementById('login-form').style.display = 'none';
+              document.getElementById('advance-user').style.display = 'block';
+            }
+          })
+          
+        </script>
+        
 </body>
 </html>
