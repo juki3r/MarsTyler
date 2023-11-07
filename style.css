@@ -12,8 +12,10 @@ body{
 }
 .nav-link:hover{
     font-weight: bold;
-    border-left: 2px solid lightgreen;
+    border-left: 2px solid lightblue;
     border-bottom: 4px solid red;
+    border-top: 4px solid lightblue;
+    border-right: 2px solid red;
 }
 
 /* CAROUSEL */
