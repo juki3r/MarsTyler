@@ -74,9 +74,6 @@ table, th, td{
     .nav-link{
         font-size: 16px !important;
     }
-    /* .carousel-inner{
-         height: 50vh; 
-    } */
     .carousel-item img{
         height: 100vh;
     }
@@ -100,6 +97,10 @@ table, th, td{
         height: 200px !important;
     } 
 }
+@media screen and (min-width:420px){
+    form{
+        width: 95%;
+    }
 @media screen and (min-width:600px){
     form{
         width: 70%;
